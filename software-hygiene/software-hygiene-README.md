@@ -1,10 +1,10 @@
-# 💿 Software Hygiene Dashboard
+# Software Hygiene Dashboard
 
 > **Wazuh Dashboard** — Provides visibility into the software inventory across the endpoint fleet, identifies the most common packages, and tracks the number of active agents in real time.
 
 ---
 
-## 🎯 Purpose of the dashboard
+## Purpose of the dashboard
 
 Maintaining an up-to-date software inventory is a fundamental prerequisite for any vulnerability management and compliance initiative. An environment where you do not know what is installed on your machines is an environment that is impossible to defend.
 
@@ -18,7 +18,7 @@ It is particularly useful for Vulnerability Management teams, CISO’s, and comp
 
 ---
 
-## 🗂️ Index Pattern used
+## Index Pattern used
 
 ```
 wazuh-states-inventory-packages-*
@@ -30,15 +30,13 @@ Each record represents a **package installed on an agent at a given point in tim
 
 ---
 
-## 📸 General overview of the dashboard
+## General overview of the dashboard
 
-<!-- SCREENSHOT TO BE PLACED HERE -->
-> 📌 **[Place a screenshot of the full dashboard here]**
-> Recommendation: use a broad time range (e.g. 30 days) to get a representative view of the inventory.
+screen 30j
 
 ---
 
-## 🧩 Detailed visualisations
+## Detailed visualisations
 
 ### 1. Top 10 Installed Software — Horizontal bar chart
 
@@ -62,8 +60,7 @@ In practice, this graph allows us to:
 
 The horizontal view is chosen because package names can be long — the horizontal bars allow for reading without truncation.
 
-<!-- SCREENSHOT TO BE PLACED HERE -->
-> 📌 **[Insert a screenshot of the ‘Top 10 installed software’ panel here]**
+screen
 
 ---
 
@@ -89,12 +86,11 @@ The information it provides is critical on two levels:
 
 The half-gauge format is chosen for its readability in a summary view — you can instantly see whether the figure is within the expected range or not.
 
-<!-- SCREENSHOT TO BE PLACED HERE -->
-> 📌 **[Insert a screenshot of the ‘Active agents’ panel here]**
+screen
 
 ---
 
-## 📥 Importing the dashboard
+## Importing the dashboard
 
 ### Prerequisites
 
@@ -127,13 +123,13 @@ If `packages` is set to `no` or if the wodle is disabled, no data will be upload
 5. Confirm the import
 6. Navigate to **Dashboards** → search for **‘Software Hygiene’**
 
-### ⚠️ Adjust the base URL if necessary
+### Adjust the base URL if necessary
 
 This dashboard contains `fieldFormatMap` entries with a hardcoded instance URL (fields `data.url`, `data.virustotal.permalink`, `data.vulnerability.reference`). Replace the URL with that of your instance in the `.ndjson` file before importing if you want the clickable links to work correctly.
 
 ---
 
-## 🔧 Recommended customisation
+## Recommended customisation
 
 **Filter by agent or group**: If your environment is segmented (servers vs. workstations, production vs. development), add a filter on `agent.name` or `agent.id` to view data by scope.
 
@@ -145,7 +141,7 @@ This dashboard contains `fieldFormatMap` entries with a hardcoded instance URL (
 
 ---
 
-## 🧪 Tested on
+## Tested on
 
 | Component | Version |
 |---------- -|---------|
@@ -156,6 +152,6 @@ This dashboard contains `fieldFormatMap` entries with a hardcoded instance URL (
 
 ---
 
-## 📄 Licence
+## Licence
 
 MIT — free to use, modify and redistribute.

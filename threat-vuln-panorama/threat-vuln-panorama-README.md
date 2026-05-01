@@ -1,10 +1,10 @@
-# 🔍 Threat & Vulnerability Overview Dashboard
+# Threat & Vulnerability Overview Dashboard
 
 > **Wazuh Dashboard** — An overview of CVE exposure across the endpoint fleet, categorised by CVSS severity and distinguishing between active and resolved vulnerabilities.
 
 ---
 
-## 🎯 Purpose of the dashboard
+## Purpose of the dashboard
 
 Vulnerability management is one of the most critical use cases for a SIEM. This dashboard utilises the **Wazuh Vulnerability Detector module** to transform raw vulnerability scan data into an operational management view.
 
@@ -18,7 +18,7 @@ This dashboard is designed for use at two levels: by VM analysts seeking to prio
 
 ---
 
-## 🗂️ Pattern Index used
+## Pattern Index used
 
 ```
 wazuh-alerts-*
@@ -30,15 +30,12 @@ The dashboard filters target these fields to display only events related to vuln
 
 ---
 
-## 📸 General overview of the dashboard
+## General overview of the dashboard
 
-<!-- SCREENSHOT TO BE PLACED HERE -->
-> 📌 **[Insert a screenshot of the full dashboard here]**
-> Recommendation: use a broad time period (30–90 days) to get a representative view of the environment. A range that is too short may only show recent scans.
-
+screen 30j
 ---
 
-## 🧩 Detailed visualisations
+## Detailed visualisations
 
 ### 1. Number of CVEs Detected by Severity — Metrics by severity
 
@@ -64,8 +61,7 @@ Points to note when analysing:
 
 The 45px font size chosen for the figures ensures readability even on a remote SOC display screen.
 
-<!-- SCREENSHOT TO BE PLACED HERE -->
-> 📌 **[Insert a screenshot of the ‘Number of CVEs detected by severity’ panel here]**
+screen
 
 ---
 
@@ -94,18 +90,17 @@ Top 4 instead of 5: the `data.vulnerability.severity` field may contain the valu
 
 A font size of 50px ensures readability on large screens.
 
-<!-- SCREENSHOT TO BE PLACED HERE -->
-> 📌 **[Place a screenshot of the ‘Active CVE by severity’ panel here]**
+screen
 
 ---
 
-## 📥 Importing the dashboard
+## Importing the dashboard
 
 ### Prerequisites
 
 - Wazuh 4.x with the Vulnerability Detector module enabled
 - At least one vulnerability scan performed (the data appears in `wazuh-alerts-*` with the rule group `vulnerability-detector`) or if you want you can directrly use the `wazuh-states-vulnerabilities-*` index
-- `wazuh-alerts-*` index pattern configured
+- `wazuh-alerts-*` or `wazuh-states-vulnerabilities-*` index pattern configured
 
 ### Enable the Vulnerability Detector (if not already done)
 
@@ -137,13 +132,13 @@ Adapt the `<os>` entries to your distributions. After activation, run an initial
 5. Confirm the import
 6. Navigate to **Dashboards** → search for **‘Threat & Vuln Panorama’**
 
-### ⚠️ Adjust the base URL if necessary
+### Adjust the base URL if necessary
 
 This dashboard contains `fieldFormatMap` entries with a hardcoded instance URL (fields `data.url`, `data.virustotal.permalink`, `data.vulnerability.reference`). Replace the URL with that of your instance in the `.ndjson` file before importing if you want the clickable links to work correctly.
 
 ---
 
-## 🔧 Recommended customisation
+## Recommended customisation
 
 **Add a filter by agent or agent group**: If you have separate environments (cloud, on-prem, DMZ), a filter on `agent.name` or on Wazuh groups allows you to view data by risk zone.
 
@@ -157,7 +152,7 @@ This dashboard contains `fieldFormatMap` entries with a hardcoded instance URL (
 
 ---
 
-## 📊 Key fields for further analysis
+## Key fields for further analysis
 
 | Field | Description |
 |-------|------- ------|
@@ -173,17 +168,17 @@ This dashboard contains `fieldFormatMap` entries with a hardcoded instance URL (
 
 ---
 
-## 🧪 Tested on
+## Tested on
 
 | Component | Version |
 |-----------|---------|
 | Wazuh | 4.x |
 | OpenSearch Dashboards | 2.x |
 | Module | Vulnerability Detector |
-| Index Pattern | `wazuh-alerts-*` |
+| Index Pattern | `wazuh-alerts-*` or `wazuh-states-vulnerabilities-*` |
 
 ---
 
-## 📄 Licence
+## Licence
 
 MIT — free to use, modify and redistribute.

@@ -1,10 +1,10 @@
-# 📡 Alert Monitoring Dashboard
+# Alert Monitoring Dashboard
 
 > **Wazuh Dashboard** — Real-time alert monitoring and triage, with classification by severity level and distribution of events across the entire agent fleet.
 
 ---
 
-## 🎯 Purpose of the dashboard
+## Purpose of the dashboard
 
 This dashboard is designed to be **the first view an SOC analyst opens** at the start of a shift or during rapid triage. It answers three fundamental questions at a glance:
 
@@ -16,7 +16,7 @@ It is aimed at both Level 1 analysts who need a quick indicator, and Level 2/3 a
 
 ---
 
-## 🗂️ Pattern Index used
+## Pattern Index used
 
 ```
 wazuh-alerts-*
@@ -26,15 +26,13 @@ This dashboard uses Wazuh’s main index, which aggregates all alerts generated 
 
 ---
 
-## 📸 General overview of the dashboard
+## General overview of the dashboard
 
-<!-- SCREENSHOT TO BE PLACED HERE -->
-> 📌 **[Insert a screenshot of the full dashboard here]**
-> Recommendation: 24-hour or 7-day view with live data, 1920×1080 resolution.
+screen 7j
 
 ---
 
-## 🧩 Detailed visualisations
+## Detailed visualisations
 
 ### 1. Critical Alerts — Metric counter
 
@@ -53,8 +51,7 @@ In practice, this dashboard allows you to:
 
 The custom label **‘Alerts’** has been retained to ensure readability for non-technical audiences (management team, reporting).
 
-<!-- SCREENSHOT TO BE PLACED HERE -->
-> 📌 **[Insert a screenshot of the ‘Critical Alerts’ panel here]**
+screen
 
 ---
 
@@ -79,17 +76,16 @@ The legend displayed at the top of the chart, showing the percentage per bracket
 
 During investigations, this panel is used to decide how to filter Discover: if a particular level is unusually dominant, a `rule.level: 12` filter is created in Discover to view the associated alerts.
 
-<!-- SCREENSHOT TO BE PLACED HERE -->
-> 📌 **[Insert a screenshot of the ‘Breakdown by severity level’ panel here]**
+screen
 
 ---
 
-## 📥 Importing the dashboard
+## Importing the dashboard
 
 ### Prerequisites
 
 - Wazuh 4.x operational with at least one active agent
-- OpenSearch Dashboards (or Kibana 7.10+) connected to the cluster
+- OpenSearch Dashboards 2.x connected to the cluster
 - `wazuh-alerts-*` index pattern already created in Stack Management → Index Patterns
 
 ### Import procedure
@@ -101,13 +97,13 @@ During investigations, this panel is used to decide how to filter Discover: if a
 5. Confirm the import
 6. Navigate to **Dashboards** → the **‘Alert Monitoring’** dashboard should appear in the list
 
-### ⚠️ Adjust the base URL if necessary
+### Adjust the base URL if necessary
 
 The `.ndjson` file contains references to a target host in the `fieldFormatMap` (fields `data.url`, `data.virustotal.permalink`, `data.vulnerability.reference`). If these fields are formatted as clickable links, check that the base URL matches your instance. To adjust it, open the `.ndjson` file in a text editor and replace `YOUR_WAZUH_HOST` with your IP or FQDN.
 
 ---
 
-## 🔧 Recommended customisation
+## Recommended customisation
 
 **Add a minimum level filter**: If your environment generates a lot of noise at low levels (0–6), you can add a persistent filter `rule.level >= 7` directly in the dashboard’s filter bar, then save the dashboard with this filter active.
 
@@ -117,7 +113,7 @@ The `.ndjson` file contains references to a target host in the `fieldFormatMap` 
 
 ---
 
-## 🧪 Tested on
+## Tested on
 
 | Component | Version |
 |---------- -|---------|
@@ -127,6 +123,6 @@ The `.ndjson` file contains references to a target host in the `fieldFormatMap` 
 
 ---
 
-## 📄 Licence
+## Licence
 
 MIT — free to use, modify and redistribute.
