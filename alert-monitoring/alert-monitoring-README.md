@@ -116,7 +116,7 @@ The `.ndjson` file contains references to a target host in the `fieldFormatMap` 
 ## Tested on
 
 | Component | Version |
-|---------- -|---------|
+|-----------|---------|
 | Wazuh | 4.x |
 | OpenSearch Dashboards | 2.x |
 | Index Pattern | `wazuh-alerts-*` |

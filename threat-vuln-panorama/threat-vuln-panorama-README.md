@@ -155,7 +155,7 @@ This dashboard contains `fieldFormatMap` entries with a hardcoded instance URL (
 ## Key fields for further analysis
 
 | Field | Description |
-|-------|------- ------|
+|-------|-------------|
 | `data.vulnerability.cve` | CVE identifier (e.g. CVE-2024-1234) |
 | `data.vulnerability.severity` | Severity: Critical, High, Medium, Low |
 | `data.vulnerability.status` | Status: Active, Obsolete, etc. |

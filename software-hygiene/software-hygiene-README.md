@@ -144,7 +144,7 @@ This dashboard contains `fieldFormatMap` entries with a hardcoded instance URL (
 ## Tested on
 
 | Component | Version |
-|---------- -|---------|
+|-----------|---------|
 | Wazuh | 4.5+ |
 | OpenSearch Dashboards | 2.x |
 | Index Pattern | `wazuh-states-inventory-packages-*` |
