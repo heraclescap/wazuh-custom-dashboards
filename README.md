@@ -1,4 +1,4 @@
-# 🛡️ Wazuh Custom Dashboards
+# Wazuh Custom Dashboards
 
 > A collection of production-ready custom dashboards for Wazuh SIEM, designed to improve SOC visibility across alert monitoring, software inventory hygiene, and vulnerability/threat panorama.
 

@@ -104,7 +104,7 @@ screen
 On a Linux agent, check that collection is active:
 
 ```xml
-<!-- In /var/ossec/etc/ossec.conf on the agent -->
+<!-- In /var/ossec/etc/ossec.conf or C:\Program Files (x86)\ossec-agent\ossec.conf on the agent -->
 <wodle name="syscollector">
   <disabled>no</disabled>
   <packages>yes</packages>
