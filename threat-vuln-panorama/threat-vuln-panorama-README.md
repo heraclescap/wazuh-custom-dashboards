@@ -154,8 +154,8 @@ Adapt the `<os>` entries to your distributions. After activation, run an initial
 | Field | Description |
 |-------|-------------|
 | `data.vulnerability.cve` | CVE identifier (e.g. CVE-2024-1234) |
-| `data.vulnerability.severity` | Severity: Critical, High, Medium, Low |
-| `data.vulnerability.status` | Status: Active, Obsolete, etc. |
+| `data.vulnerability.severity` | Severity: Critical, High, Medium, Low, - (None) |
+| `data.vulnerability.status` | Status: Active, Solved, etc. |
 | `data.vulnerability.package.name` | Affected package |
 | `data.vulnerability.package.version` | Vulnerable version installed |
 | `data.vulnerability.cvss.cvss3.base_score` | CVSS v3 score |
