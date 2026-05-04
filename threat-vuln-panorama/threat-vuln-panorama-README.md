@@ -32,7 +32,10 @@ The dashboard filters target these fields to display only events related to vuln
 
 ## General overview of the dashboard
 
-screen 30j
+![alt text](./screenshots/Threat_&_Vuln-1.png)
+![alt text](./screenshots/Threat_&_Vuln-2.png)
+![alt text](./screenshots/Threat_&_Vuln-3.png)
+
 ---
 
 ## Detailed visualisations
@@ -61,7 +64,7 @@ Points to note when analysing:
 
 The 45px font size chosen for the figures ensures readability even on a remote SOC display screen.
 
-screen
+![alt text](./screenshots/Vuln_Severity.png)
 
 ---
 
@@ -89,8 +92,6 @@ In practice, during a weekly VM update, Panel 2 is presented: “We currently ha
 Top 4 instead of 5: the `data.vulnerability.severity` field may contain the value `None` for packages where a CVE is listed but no severity score has been assigned. Limiting the list to 4 prevents a non-actionable category from being displayed in the view of active critical CVEs.
 
 A font size of 50px ensures readability on large screens.
-
-screen
 
 ---
 
@@ -131,10 +132,6 @@ Adapt the `<os>` entries to your distributions. After activation, run an initial
 4. If there is a conflict, select **Overwrite**
 5. Confirm the import
 6. Navigate to **Dashboards** → search for **‘Threat & Vuln Panorama’**
-
-### Adjust the base URL if necessary
-
-This dashboard contains `fieldFormatMap` entries with a hardcoded instance URL (fields `data.url`, `data.virustotal.permalink`, `data.vulnerability.reference`). Replace the URL with that of your instance in the `.ndjson` file before importing if you want the clickable links to work correctly.
 
 ---
 

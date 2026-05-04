@@ -28,7 +28,8 @@ This dashboard uses Wazuh’s main index, which aggregates all alerts generated 
 
 ## General overview of the dashboard
 
-screen 7j
+![alt text](./screenshots/Alerts_Monitoring-1.png)
+![alt text](./screenshots/Alerts_Monitoring-2.png)
 
 ---
 
@@ -50,8 +51,6 @@ In practice, this dashboard allows you to:
 - Serve as a starting point for an investigation: the figure should be mentally compared to the baseline from the previous week
 
 The custom label **‘Alerts’** has been retained to ensure readability for non-technical audiences (management team, reporting).
-
-screen
 
 ---
 
@@ -76,7 +75,7 @@ The legend displayed at the top of the chart, showing the percentage per bracket
 
 During investigations, this panel is used to decide how to filter Discover: if a particular level is unusually dominant, a `rule.level: 12` filter is created in Discover to view the associated alerts.
 
-screen
+![alt text](./screenshots/Breakdown_Severity.png)
 
 ---
 
@@ -96,10 +95,6 @@ screen
 4. If there is a conflict (an object with the same ID already exists), select **Overwrite**
 5. Confirm the import
 6. Navigate to **Dashboards** → the **‘Alert Monitoring’** dashboard should appear in the list
-
-### Adjust the base URL if necessary
-
-The `.ndjson` file contains references to a target host in the `fieldFormatMap` (fields `data.url`, `data.virustotal.permalink`, `data.vulnerability.reference`). If these fields are formatted as clickable links, check that the base URL matches your instance. To adjust it, open the `.ndjson` file in a text editor and replace `YOUR_WAZUH_HOST` with your IP or FQDN.
 
 ---
 

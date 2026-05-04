@@ -32,7 +32,7 @@ Each record represents a **package installed on an agent at a given point in tim
 
 ## General overview of the dashboard
 
-screen 30j
+![alt text](./screenshots/Software_Hygiene.png)
 
 ---
 
@@ -60,7 +60,7 @@ In practice, this graph allows us to:
 
 The horizontal view is chosen because package names can be long — the horizontal bars allow for reading without truncation.
 
-screen
+![alt text](./screenshots/Top_Installed_Softwares.png)
 
 ---
 
@@ -86,7 +86,7 @@ The information it provides is critical on two levels:
 
 The half-gauge format is chosen for its readability in a summary view — you can instantly see whether the figure is within the expected range or not.
 
-screen
+![alt text](./screenshots/Active_Agents.png)
 
 ---
 
@@ -122,10 +122,6 @@ If `packages` is set to `no` or if the wodle is disabled, no data will be upload
 4. If there is a conflict, select **Overwrite**
 5. Confirm the import
 6. Navigate to **Dashboards** → search for **‘Software Hygiene’**
-
-### Adjust the base URL if necessary
-
-This dashboard contains `fieldFormatMap` entries with a hardcoded instance URL (fields `data.url`, `data.virustotal.permalink`, `data.vulnerability.reference`). Replace the URL with that of your instance in the `.ndjson` file before importing if you want the clickable links to work correctly.
 
 ---
 
