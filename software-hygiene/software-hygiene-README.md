@@ -1,6 +1,6 @@
 # Software Hygiene Dashboard
 
-> **Wazuh Dashboard** — Provides visibility into the software inventory across the endpoint fleet, identifies the most common packages, and tracks the number of active agents in real time.
+> **Wazuh Dashboard** : Provides visibility into the software inventory across the endpoint fleet, identifies the most common packages, and tracks the number of active agents in real time.
 
 ---
 
@@ -38,13 +38,13 @@ Each record represents a **package installed on an agent at a given point in tim
 
 ## Detailed visualisations
 
-### 1. Top 10 Installed Software — Horizontal bar chart
+### 1. Top 10 Installed Software - Horizontal bar chart
 
 **Visualisation type:** Horizontal Bar Chart
 
 **Fields used:**
-- Metric: `cardinality(agent.name)` — number of distinct agents on which the package is present (labelled ‘Agent’)
-- Bucket/Dimension: `package.name` (top 10, sorted by descending cardinality) — labelled ‘Package’
+- Metric: `cardinality(agent.name)`, number of distinct agents on which the package is present (labelled ‘Agent’)
+- Bucket/Dimension: `package.name` (top 10, sorted by descending cardinality), labelled ‘Package’
 
 **Operational role:**
 
@@ -58,19 +58,19 @@ In practice, this graph allows us to:
 - Prepare patching campaigns: if `openssl 1.1.1` is on 200 machines and a critical CVE is released, this graph immediately shows the extent of the exposure
 - Detect unauthorised software (shadow IT) that may have been installed without going through official channels
 
-The horizontal view is chosen because package names can be long — the horizontal bars allow for reading without truncation.
+The horizontal view is chosen because package names can be long, the horizontal bars allow for reading without truncation.
 
 ![alt text](./screenshots/Top_Installed_Softwares.png)
 
 ---
 
-### 2. Active Agents — Semi-circular gauge
+### 2. Active Agents - Semi-circular gauge
 
-**Visualisation type:** Gauge (Time Series Visual Builder — TSVB)
+**Visualisation type:** Gauge (Time Series Visual Builder, TSVB)
 
 **Fields used:**
 - Source: `wazuh-monitoring-*` index
-- Metric: `cardinality(id)` — number of distinct agents with active status
+- Metric: `cardinality(id)`, number of distinct agents with active status
 - Filter: `status: active` (KQL filter applied to the dashboard)
 - Time field: `timestamp`
 
@@ -84,7 +84,7 @@ The information it provides is critical on two levels:
 
 **Governance level**: This figure is useful for reporting: “100% of our endpoints are reporting telemetry data” is an important SOC coverage metric. If agents go down and are not restarted, coverage deteriorates silently.
 
-The half-gauge format is chosen for its readability in a summary view — you can instantly see whether the figure is within the expected range or not.
+The half-gauge format is chosen for its readability in a summary view, you can instantly see whether the figure is within the expected range or not.
 
 ![alt text](./screenshots/Active_Agents.png)
 
@@ -150,4 +150,4 @@ If `packages` is set to `no` or if the wodle is disabled, no data will be upload
 
 ## Licence
 
-MIT — free to use, modify and redistribute.
+MIT - free to use, modify and redistribute.
