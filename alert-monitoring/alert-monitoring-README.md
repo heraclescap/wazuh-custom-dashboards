@@ -1,6 +1,6 @@
 # Alert Monitoring Dashboard
 
-> **Wazuh Dashboard** - Real-time alert monitoring and triage, with classification by severity level and distribution of events across the entire agent fleet.
+> **Wazuh Dashboard** : Real-time alert monitoring and triage, with classification by severity level and distribution of events across the entire agent fleet.
 
 ---
 
