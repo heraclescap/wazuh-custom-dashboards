@@ -1,6 +1,6 @@
 # Alert Monitoring Dashboard
 
-> **Wazuh Dashboard** — Real-time alert monitoring and triage, with classification by severity level and distribution of events across the entire agent fleet.
+> **Wazuh Dashboard** - Real-time alert monitoring and triage, with classification by severity level and distribution of events across the entire agent fleet.
 
 ---
 
@@ -35,7 +35,7 @@ This dashboard uses Wazuh’s main index, which aggregates all alerts generated 
 
 ## Detailed visualisations
 
-### 1. Critical Alerts — Metric counter
+### 1. Critical Alerts - Metric counter
 
 **Visualisation type:** Metric (numeric counter)
 
@@ -54,7 +54,7 @@ The custom label **‘Alerts’** has been retained to ensure readability for no
 
 ---
 
-### 2. Breakdown by Severity Level — Pie chart (Donut)
+### 2. Breakdown by Severity Level - Pie chart (Donut)
 
 **Visualisation type:** Pie chart (Donut)
 
@@ -120,4 +120,4 @@ During investigations, this panel is used to decide how to filter Discover: if a
 
 ## Licence
 
-MIT — free to use, modify and redistribute.
+MIT - free to use, modify and redistribute.
