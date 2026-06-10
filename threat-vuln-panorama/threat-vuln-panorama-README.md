@@ -1,6 +1,6 @@
 # Threat & Vulnerability Overview Dashboard
 
-> **Wazuh Dashboard** — An overview of CVE exposure across the endpoint fleet, categorised by CVSS severity and distinguishing between active and resolved vulnerabilities.
+> **Wazuh Dashboard** : An overview of CVE exposure across the endpoint fleet, categorised by CVSS severity and distinguishing between active and resolved vulnerabilities.
 
 ---
 
@@ -40,12 +40,12 @@ The dashboard filters target these fields to display only events related to vuln
 
 ## Detailed visualisations
 
-### 1. Number of CVEs Detected by Severity — Metrics by severity
+### 1. Number of CVEs Detected by Severity - Metrics by severity
 
 **Visualisation type:** Metric (multiple counters per group)
 
 **Fields used:**
-- Metric: `count()` — labelled ‘CVE’
+- Metric: `count()`, labelled ‘CVE’
 - Grouping (bucket ‘group’): `data.vulnerability.severity` (top 5, sorted by descending count)
 
 **Operational role:**
@@ -68,13 +68,13 @@ The 45px font size chosen for the figures ensures readability even on a remote S
 
 ---
 
-### 2. Active CVEs by Severity — Active CVE metrics only
+### 2. Active CVEs by Severity - Active CVE metrics only
 
 **Visualisation type:** Metric (multiple counters per group)
 
 **Fields used:**
 - KQL filter applied to the dashboard: `data.vulnerability.status: Active`
-- Metric: `count()` — labelled ‘CVE’
+- Metric: `count()`, labelled ‘CVE’
 - Grouping (bucket ‘group’): `data.vulnerability.severity` (top 4, sorted by descending count)
 
 **Operational role:**
@@ -83,9 +83,9 @@ This visualisation is the **actionable complement** to the previous dashboard. I
 
 The distinction between Panel 1 (all detected CVEs) and Panel 2 (active CVEs only) is fundamental to avoiding noise in the reporting:
 
-**Panel 1 — All CVEs**: includes historical CVEs, CVEs that have been patched since the last scan, and CVEs that have changed status. This is the comprehensive view of what has been observed over the period.
+**Panel 1 - All CVEs**: includes historical CVEs, CVEs that have been patched since the last scan, and CVEs that have changed status. This is the comprehensive view of what has been observed over the period.
 
-**Panel 2 — Active CVEs**: retains only what is **still vulnerable now**. This is the view that requires action. A significant gap between the two panels is a positive sign: it means that patches have been deployed and the situation is improving.
+**Panel 2 - Active CVEs**: retains only what is **still vulnerable now**. This is the view that requires action. A significant gap between the two panels is a positive sign: it means that patches have been deployed and the situation is improving.
 
 In practice, during a weekly VM update, Panel 2 is presented: “We currently have X active critical vulnerabilities, Y high-severity and Z medium-severity vulnerabilities across our infrastructure.” It is this figure that feeds into the attack surface reduction KPIs.
 
@@ -139,7 +139,7 @@ Adapt the `<os>` entries to your distributions. After activation, run an initial
 
 **Add a filter by agent or agent group**: If you have separate environments (cloud, on-prem, DMZ), a filter on `agent.name` or on Wazuh groups allows you to view data by risk zone.
 
-**Add a top 10 list of the most prevalent CVEs**: An aggregation on `data.vulnerability.cve` sorted by count allows you to see the CVEs affecting the most machines — ideal for prioritising patching.
+**Add a top 10 list of the most prevalent CVEs**: An aggregation on `data.vulnerability.cve` sorted by count allows you to see the CVEs affecting the most machines, ideal for prioritising patching.
 
 **Add a top 10 list of vulnerable packages**: An aggregation on `data.vulnerability.package.name` + `data.vulnerability.package.version` with a `status: Active` filter provides a list of packages to patch as a priority.
 
@@ -178,4 +178,4 @@ Adapt the `<os>` entries to your distributions. After activation, run an initial
 
 ## Licence
 
-MIT — free to use, modify and redistribute.
+MIT - free to use, modify and redistribute.
